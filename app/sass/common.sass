@@ -1,0 +1,239 @@
+@import 'vars'
+
+.title
+	font-size: 72px
+	font-family: 'Kanit', sans-serif
+	font-weight: 700
+	letter-spacing: 1px
+	line-height: 1
+	margin-bottom: 0
+	&--white
+		color: $white
+	&--black
+		color: $black
+		
+.sub-title
+	font-size: 56px
+	font-family: 'Kanit', sans-serif
+	font-weight: 700
+	letter-spacing: 1px
+	line-height: 1
+	margin-bottom: 0
+	&--white
+		color: $white
+	&--black
+		color: $black
+		
+.btn-main
+	background: linear-gradient(164.23deg, #2DCB71 0%, #205072 100%)
+	-webkit-border-radius: 5px
+	-moz-border-radius: 5px
+	border-radius: 5px
+	display: flex
+	align-items: center
+	justify-content: center
+	font-size: 18px
+	font-family: 'Josefin Sans', sans-serif
+	font-weight: 400
+	color: $white
+	max-width: 170px
+	padding: 10.5px 10px
+	outline: none
+	&:hover, &:focus
+		background: linear-gradient(135deg, #CA5EFF 0%, #004FDE 100%)
+		color: $white
+		text-decoration: none
+	&--white
+		background: $white
+		border: 1px solid lighten($purple, 32)
+		color: $purple
+		padding-top: 9.5px
+		padding-bottom: 9.5px
+		&:hover, &:focus
+			color: $purple
+			background: $white
+	&--yellow
+		background: $yellow
+		color: $white
+		&:hover, &:focus
+			color: $white
+			background: $yellow
+
+			
+.btn-action
+	background: $white
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.0992414)
+	border-radius: 24px
+	display: flex
+	justify-content: center
+	align-items: center
+	font-size: 14px
+	font-family: 'Josefin Sans', sans-serif
+	font-weight: 400
+	max-width: 146px
+	flex-basis: 146px
+	padding: 10.5px 10px
+	outline: none
+	@media (max-width: 1199px)
+		max-width: 120px
+		flex-basis: 120px
+	@media (max-width: 991px)
+		max-width: 146px
+		flex-basis: 146px
+	&--light
+		color: $btn-light
+		&:hover, &:focus
+			color: $btn-light
+	&--dark
+		color: $btn-dark
+		&:hover, &:focus
+			color: $btn-dark
+	&:hover, &:focus
+		text-decoration: none
+		
+		
+.circle
+	width: 48px
+	height: 48px
+	border: 1px solid rgba(255, 255, 255, 0.3003)
+	-webkit-border-radius: 50%
+	-moz-border-radius: 50%
+	border-radius: 50%
+
+.browse
+	display: flex
+	align-items: center
+	justify-content: center
+	
+.browse-all
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-top: 79px
+	margin-bottom: 0
+	@media (max-width: 991px)
+		margin-top: 35px
+	&__text
+		color: $black
+		display: inline-block
+		font-family: 'Josefin Sans', sans-serif
+		font-weight: 300
+		font-size: 20px
+		margin-right: 15px
+	&__icon
+		border: 1px solid rgba(51, 51, 51, 0.297271)
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 48px
+		height: 48px
+		-webkit-border-radius: 50%
+		-moz-border-radius: 50%
+		border-radius: 50%
+	&:hover
+		.browse-all__text
+			text-decoration: underline
+
+.card
+	border: none
+	border-radius: 8px
+	font-family: 'Josefin Sans Bold', sans-serif
+	padding: 32px
+	@media (max-width: 1199px)
+		padding: 15px
+	@media (max-width: 991px)
+		padding: 32px
+	&--aqua
+		background: linear-gradient(180deg, #00CDAC 0%, #02AAB0 100%)
+	&--orange
+		background: linear-gradient(180deg, #FF9966 0%, #FF5E62 100%)
+	&--purple
+		background: linear-gradient(180deg, #6F86D6 0%, #48C6EF 100%)
+	.card-title
+		color: $white
+		font-family: 'Kanit', sans-serif
+		font-weight: 700
+		font-size: 24px
+		line-height: 1
+	.card-by
+		color: $white
+		font-family: 'Josefin Sans', sans-serif
+		font-weight: 400
+		font-size: 20px
+		line-height: 24px
+	.card-compose
+		color: $white
+		margin-top: 30px
+	.card-compose-in
+		display: flex
+		justify-content: space-between
+		align-items: center
+		&__left, &__right
+			font-family: 'Josefin Sans', sans-serif
+			font-weight: 700
+			display: inline-block
+	.card-select-wrapper
+		padding: 0 30px 10px
+		position: relative
+		margin-top: 40px
+		margin-bottom: 15px
+		@media (max-width: 1199px)
+			padding-left: 0
+			padding-right: 0
+		@media (max-width: 991px)
+			padding: 0 30px 10px
+		&:after
+			content: ''
+			position: absolute
+			left: 50%
+			bottom: 0
+			transform: translateX(-50%)
+			width: 228px
+			height: 1px
+			background: $white
+			@media (max-width: 1199px)
+				width: 100%
+			@media (max-width: 991px)
+				width: 228px
+	.card-select
+		width: 100%
+		~ .select2
+			width: 100%
+
+	.card-actions
+		display: flex
+		justify-content: space-between
+
+/*custom select*/
+.select-info
+	&__cost
+		color: #000
+		font-family: 'Josefin Sans', sans-serif
+		font-weight: 700
+		display: inline-block
+		margin-right: 22px
+	&__value
+		color: #000
+		font-family: 'Josefin Sans', sans-serif
+		font-weight: 400
+		font-size: 14px
+
+.select2-container--default .select2-selection--single
+	border-radius: 5px !important
+	border: none !important
+.select2-container .select2-selection--single
+	height: 48px !important
+.select2-container--default .select2-selection--single .select2-selection__rendered
+	padding-top: 10px
+.select2-container--default .select2-selection--single .select2-selection__arrow
+	top: 50% !important
+	transform: translateY(-50%)
+	b
+		border-color: #000 transparent transparent transparent !important
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
+	border-color: transparent transparent #000 transparent !important
+.select2-dropdown
+	border-radius: 5px !important
+	border: none !important
+.select2-results__option
+	border-radius: 5px

@@ -1,0 +1,337 @@
+@import 'vars'
+
+.main
+	background: url('../img/Bitmap.jpg') no-repeat center
+	-webkit-background-size: cover
+	background-size: cover
+	height: 880px
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		bottom: 0
+		background: url('../img/Rectangle.png') no-repeat center / 100%
+		width: 135px
+		height: 135px
+		z-index: 1
+		@media (max-width: 991px)
+			width: 75px
+			height: 75px
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background: linear-gradient(148.57deg, #2DCB71 0%, #205072 100%)
+		opacity: 0.9
+		
+.container--main
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	height: 880px
+	padding-bottom: 48px
+	z-index: 1
+	@media (max-width: 991px)
+		padding-bottom: 35px
+
+.container
+	@media (min-width: 1200px)
+		width: 1200px
+	
+.burger
+	display: none
+	@media (max-width: 991px)
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		&.open
+			z-index: 10
+			filter: brightness(0%)
+	&__line
+		width: 16px
+		height: 2px
+		background: $white
+		margin-bottom: 5px
+		&:last-child
+			margin-bottom: 0
+	
+.header
+	flex: 0 0 100%
+	max-width: 100%
+
+.logo, .user, .main-icon, .burger
+	cursor: pointer
+
+.logo
+	img
+		@media (max-width: 991px)
+			width: 75%
+
+.user
+	display: flex
+	justify-content: center
+	align-items: center
+	@media (max-width: 991px)
+		margin-left: auto
+		margin-right: 11px
+
+.header
+	display: flex
+	justify-content: space-between
+	align-items: center
+	
+.navigation
+	display: flex
+	align-items: center
+	justify-content: space-between
+	font-family: 'Josefin Sans', sans-serif
+	flex-basis: 60%
+	max-width: 60%
+	transition: 0.5s
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+		font-family: sans-serif
+	@media (max-width: 991px)
+		background-color: $white
+		position: fixed
+		top: -100%
+		left: 0
+		height: 100%
+		width: 100%
+		max-width: 100%
+		z-index: 9
+		flex-direction: column
+		justify-content: center
+		&.open
+			top: 0
+			.navigation__link
+				color: $black
+				font-size: 35px
+	&__link
+		color: $white
+		font-size: 20px
+		&:hover
+			color: $white
+			text-decoration: underline
+
+.main-title
+	text-align: center
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	@media (max-width: 991px)
+		width: 690px
+	&__text
+		min-width: 850px
+		@media (max-width: 991px)
+			min-width: unset
+			font-size: 55px
+	&__btn
+		background: $white
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.0992414)
+		border-radius: 24px
+		color: $black
+		font-size: 24px
+		font-family: 'Josefin Sans', sans-serif
+		font-weight: bold
+		display: flex
+		align-items: center
+		justify-content: center
+		max-width: 295px
+		padding: 14px 0
+		margin: 40px auto 0
+		&:hover, &:focus
+			text-decoration: none
+			color: $black
+
+.main-icon
+	margin: auto auto 0
+	display: flex
+	align-items: center
+	justify-content: center
+	
+	
+/*products*/
+.products
+	background: $white
+	padding: 75px 0
+	@media (max-width: 991px)
+		padding: 35px 0
+.product-title
+	&__excerpt
+		color: $black
+		font-size: 24px
+		font-family: 'Josefin Sans', sans-serif
+		font-weight: 300
+		line-height: 1
+		margin-top: 15px
+.product-cards
+	margin-top: 106px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	@media (max-width: 991px)
+		flex-direction: column
+		margin-top: 35px
+	.card
+		width: 370px
+		@media (max-width: 1199px)
+			width: 290px
+		@media (max-width: 991px)
+			margin-bottom: 50px
+			width: 370px
+			&:last-child
+				margin-bottom: 0
+/*products*/
+
+/*dispansaries, featured*/
+.dispensaries, .featured
+	background: #EEEEEE
+	padding: 75px 0
+	border-bottom: 1px solid #C2C2C2
+	@media (max-width: 991px)
+		padding: 35px 0
+	&:before
+		content: ''
+		position: absolute
+		right: 0
+		top: 0
+		background: url('../img/Rectangle-dispensaries.png') no-repeat center / 100%
+		width: 135px
+		height: 135px
+		z-index: 1
+		@media (max-width: 991px)
+			width: 75px
+			height: 75px
+
+
+.featured
+	background: #E9E9E9
+	border: none
+	&:before
+		content: ''
+		position: absolute
+		right: inherit
+		left: 0
+		top: inherit
+		bottom: 0
+		background: url('../img/Rectangle-brightness.png') no-repeat center / 100%
+		width: 135px
+		height: 135px
+		z-index: 1
+		@media (max-width: 991px)
+			width: 75px
+			height: 75px
+	
+.dispensaries-title, .featured-title
+	text-align: center
+	&__excerpt
+		color: $black
+		font-size: 24px
+		font-family: 'Josefin Sans', sans-serif
+		font-weight: 300
+		line-height: 1
+		margin-top: 15px
+		
+.dispensaries-list, .featured-list
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-top: 86px
+	@media (max-width: 991px)
+		flex-direction: column
+		margin-top: 35px
+	&__item
+		width: 370px
+		border-radius: 8px
+		@media (max-width: 1199px)
+			width: 290px
+		@media (max-width: 991px)
+			margin-bottom: 50px
+			width: 370px
+			&:last-child
+				margin-bottom: 0
+		.btn-main
+			margin: 34px auto 0
+.dispensaries-in, .featured-in
+	background: $white
+	height: 370px
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 8px
+	box-shadow: 0 2.5px 5px #D8D8D8
+	@media (max-width: 1199px)
+		height: 290px
+	@media (max-width: 991px)
+		height: 370px
+	img
+		max-height: 100%
+		max-width: 100%
+		//object-fit: cover
+		border-radius: 8px
+/*dispansaries, featured*/
+
+/*medical*/
+.medical
+	background: linear-gradient(148.57deg, #2DCB71 0%, #004FDE 100%)
+	min-height: 880px
+	padding: 160px 0
+	@media (max-width: 991px)
+		padding: 70px 0 35px
+	
+.container--medical
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap-reverse
+
+.medical-left
+	flex: 0 0 350px
+	max-width: 350px
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	@media (max-width: 991px)
+		flex: 0 0 100%
+		max-width: 100%
+		margin-top: 78px
+	&__text
+		color: $white
+		font-family: 'Josefin Sans', sans-serif
+		font-weight: 300
+		font-size: 24px
+		line-height: 32px
+		margin: 30px 0 50px
+	&__btn
+		@media (max-width: 991px)
+			margin-left: auto
+			margin-right: auto
+.medical-right
+	flex-grow: 1
+	text-align: right
+	@media (max-width: 991px)
+		flex: 0 0 100%
+		max-width: 100%
+		text-align: center
+	&__image
+		display: inline-block
+		position: relative
+		border-radius: 8px
+		&:before
+			content: ''
+			position: absolute
+			left: -28px
+			top: 28px
+			background-color: $yellow
+			width: 100%
+			height: 100%
+			z-index: 0
+			border-radius: 8px
+		img
+			position: relative
+			border-radius: 8px
+/*medical*/

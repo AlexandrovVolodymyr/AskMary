@@ -1,0 +1,51 @@
+/* default styles for all pages */
+
+@import 'vars'
+@import 'mixins'
+@import 'fonts'
+@import 'common'
+@import 'home-page'
+
+*
+  box-sizing: border-box
+  &:hover, &:active, &:focus
+      outline: none
+
+html
+  font-family: Helvetica, Arial, sans-serif
+  font-size: 16px
+  height: 100%
+  
+body
+  margin: 0
+  padding: 0
+  height: 100%
+  &.ov-hidden
+    overflow: hidden
+
+ul
+  padding: 0
+  margin: 0
+  list-style: none
+
+select
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+
+select::-ms-expand
+  display: none
+
+a
+  text-decoration: none
+  transition: all 0.3s linear
+  &:hover
+    text-decoration: none
+    
+[role=button], a, area, button, input, label, select, summary, textarea
+  touch-action: none
+  -ms-touch-action: none
+
+section
+  position: relative
+
