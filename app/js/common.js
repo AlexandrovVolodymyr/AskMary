@@ -10,7 +10,7 @@ $(document).ready(function () {
         $('.navigation').addClass('open');
         $('body').addClass('ov-hidden');
       }
-    })
+    });
   }
   mobileNav();
 
@@ -21,7 +21,7 @@ $(document).ready(function () {
     $('html, body').animate({scrollTop: dn}, 500);
   });
 
-  var selectFlower = [
+  const selectFlower = [
     {
       id: 0,
       text: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Gram</span></div>',
@@ -32,10 +32,25 @@ $(document).ready(function () {
       text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
       html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
       title: 'second'
+    }, {
+      id: 2,
+      text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+      html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+      title: 'second'
+    }, {
+      id: 3,
+      text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+      html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+      title: 'second'
+    }, {
+      id: 4,
+      text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+      html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+      title: 'second'
     }
   ];
 
-  var selectEdible = [
+  const selectEdible = [
     {
       id: 0,
       text: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Each</span></div>',
@@ -49,7 +64,7 @@ $(document).ready(function () {
     }
   ];
 
-  var selectVape = [
+  const selectVape = [
     {
       id: 0,
       text: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Gram</span></div>',
@@ -93,7 +108,7 @@ $(document).ready(function () {
 
   $(".card-select--vape").select2({
     minimumResultsForSearch: -1,
-    data: selectEdible,
+    data: selectVape,
     escapeMarkup: function(markup) {
       return markup;
     },
@@ -103,5 +118,57 @@ $(document).ready(function () {
     templateSelection: function(data) {
       return data.text;
     }
+  });
+
+  $('.card-actions .see-more').each(function (e) {
+    $(this).on('click', function (e) {
+      e.preventDefault();
+
+      if ($(this).hasClass('open')) {
+        $(this).removeClass('open');
+        $(this).text('See More Info');
+        $(this).closest('.card').removeClass('open');
+      } else {
+        // delete for all
+        const lessBtn = $('.card-actions .see-more');
+        lessBtn.text('See More Info');
+        lessBtn.removeClass('open');
+        $('.card').removeClass('open');
+
+        // delete for current
+        $(this).addClass('open');
+        $(this).text('See Less Info');
+        $(this).closest('.card').addClass('open');
+      }
+    })
+  });
+
+  $('#cardModal').on('shown.bs.modal', function (event) {
+    let modal = $(this);
+    let button = $(event.relatedTarget);
+    let text = button.data('text');
+    /*lists*/
+    modal.find('.terpen__title').addClass('show');
+    let lists = button.closest('.card.open').find('.lists').clone();
+    lists.addClass('show');
+    lists.find('*').addClass('show');
+    modal.find('.modal-lists').html(lists);
+    /*lists*/
+    modal.find('.card-descriptions__title').addClass('show');
+    modal.find('.card-descriptions__text').addClass('show').text(text);
+    // modal.slideDown('fast');
+    // const bgColor = $('.card.open').css('background');
+    // modal.find('.modal-content').css('background', bgColor);
+  });
+
+  $('#cardModal').on('hidden.bs.modal', function () {
+    const lessBtn = $('.card-actions .see-more');
+    lessBtn.text('See More Info');
+    lessBtn.removeClass('open');
+    $('.card').removeClass('open');
+    $(this).find('.modal-body .card-descriptions__title').removeClass('show');
+    $(this).find('.modal-body .card-descriptions__text').removeClass('show').text('');
+    $(this).find('.lists').removeClass('show').text('');
+    // $('.modal-content').css('background', '#fff');
   });
 });

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Kanit:400,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+  <!--<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />-->
 
   <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
@@ -68,6 +68,38 @@
       </div>
       <div class="product-cards">
         <div class="card card--aqua">
+          <div class="lists">
+            <div class="lists-title">Terpene</div>
+            <ul class="info-list terpen-list">
+              <li class="info-list__item terpen-list__item">
+                <div class="inform terpen">
+                  <div class="inform-name">Caryophyllene1 -</div>
+                  <div class="inform-value">2.34%</div>
+                </div>
+              </li>
+              <li class="info-list__item terpen-list__item">
+                <div class="inform terpen">
+                  <div class="inform-name">Caryophyllene1 -</div>
+                  <div class="inform-value">2.34%</div>
+                </div>
+              </li>
+            </ul>
+            <div class="lists-title">Cannabinoids</div>
+            <ul class="info-list">
+              <li class="info-list__item">
+                <div class="inform">
+                  <div class="inform-name">Caryophyllene1 -</div>
+                  <div class="inform-value">2.34%</div>
+                </div>
+              </li>
+              <li class="info-list__item">
+                <div class="inform">
+                  <div class="inform-name">Caryophyllene1 -</div>
+                  <div class="inform-value">2.34%</div>
+                </div>
+              </li>
+            </ul>
+          </div>
           <div class="card-title">Granddaddy Purple</div>
           <div class="card-by">By: Verano</div>
           <div class="card-compose">
@@ -81,10 +113,14 @@
             </div>
           </div>
           <label class="card-select-wrapper">
-            <select class="card-select card-select--flower"></select>
+            <select class="card-select card-select--flower" style="width: 100%"></select>
           </label>
           <div class="card-actions">
-            <a href="#" class="btn-action btn-action--dark">See More Info</a>
+            <a href="#" class="btn-action btn-action--dark see-more"
+               data-title="Description"
+               data-text="CBD Sativa-dominant Brings relief to pain and inflammation with minimal psycho activity nflammation with minimal psycho CBD Sativa-dominant Brings relief to pain and inflammation with minimal psycho activity nflammation with minimal psycho CBD Sativa-dominant Brings relief to pain and inflammation with minimal psycho activity nflammation with minimal psycho"
+               data-toggle="modal"
+               data-target="#cardModal">See More Info</a>
             <a href="#" class="btn-action btn-action--light">Add To Cart</a>
           </div>
         </div>
@@ -102,14 +138,46 @@
             </div>
           </div>
           <label class="card-select-wrapper">
-            <select class="card-select card-select--edible"></select>
+            <select class="card-select card-select--edible" style="width: 100%"></select>
           </label>
           <div class="card-actions">
-            <a href="#" class="btn-action btn-action--dark">See More Info</a>
+            <a href="#" class="btn-action btn-action--dark see-more">See More Info</a>
             <a href="#" class="btn-action btn-action--light">Add To Cart</a>
           </div>
         </div>
         <div class="card card--purple">
+          <div class="lists">
+            <div class="lists-title">Terpene</div>
+            <ul class="info-list terpen-list">
+              <li class="info-list__item terpen-list__item">
+                <div class="inform terpen">
+                  <div class="inform-name">Caryophyllene1 -</div>
+                  <div class="inform-value">2.34%</div>
+                </div>
+              </li>
+              <li class="info-list__item terpen-list__item">
+                <div class="inform terpen">
+                  <div class="inform-name">Caryophyllene1 -</div>
+                  <div class="inform-value">2.34%</div>
+                </div>
+              </li>
+            </ul>
+            <div class="lists-title">Cannabinoids</div>
+            <ul class="info-list">
+              <li class="info-list__item">
+                <div class="inform">
+                  <div class="inform-name">Caryophyllene1 -</div>
+                  <div class="inform-value">2.34%</div>
+                </div>
+              </li>
+              <li class="info-list__item">
+                <div class="inform">
+                  <div class="inform-name">Caryophyllene1 -</div>
+                  <div class="inform-value">2.34%</div>
+                </div>
+              </li>
+            </ul>
+          </div>
           <div class="card-title">Granddaddy Purple</div>
           <div class="card-by">By: Verano</div>
           <div class="card-compose">
@@ -123,10 +191,14 @@
             </div>
           </div>
           <label class="card-select-wrapper">
-            <select class="card-select card-select--vape"></select>
+            <select class="card-select card-select--vape" style="width: 100%"></select>
           </label>
           <div class="card-actions">
-            <a href="#" class="btn-action btn-action--dark">See More Info</a>
+            <a href="#" class="btn-action btn-action--dark see-more"
+               data-title="Description2"
+               data-text="CBD Sativa-dominant Brings relief to pain and inflammation with minimal psycho activity"
+               data-toggle="modal"
+               data-target="#cardModal">See More Info</a>
             <a href="#" class="btn-action btn-action--light">Add To Cart</a>
           </div>
         </div>
@@ -235,9 +307,92 @@
     </div>
   </section>
 
+  <footer class="footer">
+    <div class="container container--footer">
+      <div class="footer-top">
+        <ul class="footer-list">
+          <li class="footer-list__item">
+            <div class="footer-logo">
+              <a href="#" class="footer-logo__link">re</a>
+            </div>
+            <div class="footer-address">
+              <div class="footer-address__shell">
+                42 Nine Avenue, 7/3 Floor
+                San Francisco, CA 1980
+              </div>
+            </div>
+            <div class="footer-social">
+              <a href="" class="footer-social__link">
+                <img src="img/facebook.svg" alt="facebook">
+              </a>
+              <a href="" class="footer-social__link">
+                <img src="img/twitter.svg" alt="twitter">
+              </a>
+              <a href="" class="footer-social__link">
+                <img src="img/instagram.svg" alt="instagram">
+              </a>
+            </div>
+          </li>
+          <li class="footer-list__item">
+            <div class="footer-title">Menu</div>
+            <ul class="footer-menu">
+              <li class="footer-menu__item"><a href="#" class="footer-menu__link">Home</a></li>
+              <li class="footer-menu__item"><a href="#" class="footer-menu__link">About</a></li>
+              <li class="footer-menu__item"><a href="#" class="footer-menu__link">Services</a></li>
+              <li class="footer-menu__item"><a href="#" class="footer-menu__link">Guide</a></li>
+              <li class="footer-menu__item"><a href="#" class="footer-menu__link">Features</a></li>
+              <li class="footer-menu__item"><a href="#" class="footer-menu__link">Support</a></li>
+              <li class="footer-menu__item"><a href="#" class="footer-menu__link">Pricing</a></li>
+              <li class="footer-menu__item"><a href="#" class="footer-menu__link">Contact</a></li>
+              <li class="footer-menu__item"><a href="#" class="footer-menu__link">Blog</a></li>
+              <li class="footer-menu__item"><a href="#" class="footer-menu__link">Agents</a></li>
+            </ul>
+          </li>
+          <li class="footer-list__item">
+            <div class="footer-title">Subscribe</div>
+            <form class="subscribe-form">
+              <div class="subscribe-form__text">Get latest news & update</div>
+              <input type="text" class="subscribe-form__input" placeholder="Your email">
+              <a href="#" class="btn-main subscribe-form__btn">Subscribe</a>
+            </form>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div class="copyright">2019 RE. All rights reserved.</div>
+        <div class="copyright-author">Crafted by Laaqiq</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal fade card-modal"
+       id="cardModal"
+       tabindex="-1" role="dialog"
+       aria-labelledby="exampleModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="card-descriptions-wrapper">
+            <div class="card-descriptions">
+              <div class="card-descriptions__title">Description</div>
+              <div class="card-descriptions__text"></div>
+            </div>
+            <div class="modal-lists"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn-action btn-action--white" data-dismiss="modal">Close</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
 
   <script src="js/libs.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+  <!--<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>-->
   <script src="js/common.js"></script>
 </body>
 </html>

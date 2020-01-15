@@ -19,6 +19,8 @@
 	letter-spacing: 1px
 	line-height: 1
 	margin-bottom: 0
+	@media (max-width: 767px)
+		font-size: 40px
 	&--white
 		color: $white
 	&--black
@@ -43,6 +45,9 @@
 		background: linear-gradient(135deg, #CA5EFF 0%, #004FDE 100%)
 		color: $white
 		text-decoration: none
+	@media (max-width: 576px)
+		max-width: 120px
+		font-size: 14px
 	&--white
 		background: $white
 		border: 1px solid lighten($purple, 32)
@@ -58,7 +63,6 @@
 		&:hover, &:focus
 			color: $white
 			background: $yellow
-
 			
 .btn-action
 	background: $white
@@ -69,7 +73,7 @@
 	align-items: center
 	font-size: 14px
 	font-family: 'Josefin Sans', sans-serif
-	font-weight: 400
+	font-weight: 700
 	max-width: 146px
 	flex-basis: 146px
 	padding: 10.5px 10px
@@ -80,6 +84,9 @@
 	@media (max-width: 991px)
 		max-width: 146px
 		flex-basis: 146px
+	@media (max-width: 576px)
+		max-width: 120px
+		flex-basis: 120px
 	&--light
 		color: $btn-light
 		&:hover, &:focus
@@ -143,6 +150,8 @@
 		padding: 15px
 	@media (max-width: 991px)
 		padding: 32px
+	@media (max-width: 576px)
+		padding: 15px
 	&--aqua
 		background: linear-gradient(180deg, #00CDAC 0%, #02AAB0 100%)
 	&--orange
@@ -182,6 +191,9 @@
 			padding-right: 0
 		@media (max-width: 991px)
 			padding: 0 30px 10px
+		@media (max-width: 576px)
+			padding-left: 0
+			padding-right: 0
 		&:after
 			content: ''
 			position: absolute
@@ -195,21 +207,92 @@
 				width: 100%
 			@media (max-width: 991px)
 				width: 228px
+			@media (max-width: 576px)
+				width: 100%
 	.card-select
 		width: 100%
-		~ .select2
-			width: 100%
 
 	.card-actions
 		display: flex
 		justify-content: space-between
-
+.card.open
+	z-index: 1
+	&:after
+		content: ''
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		border: 2px solid $yellow
+		-webkit-border-radius: 8px
+		-moz-border-radius: 8px
+		border-radius: 8px
+		z-index: -1
+.card-modal
+	.modal-content
+		background: #EEEEEE
+	.lists
+		opacity: 0
+		&.show
+			opacity: 1
+	.lists *
+		opacity: 0
+		transition: opacity 1.75s
+		&.show
+			opacity: 1
+	.lists-title
+		font-size: 14px
+		font-weight: 700
+		font-family: 'Josefin Sans', sans-serif
+		text-align: center
+		margin: 15px 0
+		
+	.info-list
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		font-size: 14px
+		font-family: 'Josefin Sans', sans-serif
+		&__item
+			display: flex
+			justify-content: space-between
+			align-items: center
+			flex: 0 0 100%
+			max-width: 100%
+			.inform
+				display: flex
+				justify-content: space-between
+				align-items: center
+		.inform-value
+			margin-left: 5px
+		.inform-name, .inform-value
+			opacity: 0
+			&.show
+				opacity: 1
+	.card-descriptions
+		&__title
+			font-weight: 700
+			text-align: center
+		&__text
+			font-weight: 400
+			margin-top: 15px
+		&__text, &__title
+			font-size: 14px
+			font-family: 'Josefin Sans', sans-serif
+			opacity: 0
+			transition: opacity 1.75s
+			&.show
+				opacity: 1
 /*custom select*/
 .select-info
+	display: flex
+	align-items: center
 	&__cost
 		color: #000
 		font-family: 'Josefin Sans', sans-serif
 		font-weight: 700
+		font-size: 20px
 		display: inline-block
 		margin-right: 22px
 	&__value
@@ -218,15 +301,25 @@
 		font-weight: 400
 		font-size: 14px
 
+.select2-results__options
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.0992414)
 .select2-container--default .select2-selection--single
 	border-radius: 5px !important
 	border: none !important
+.select2-results__option
+	height: 48px
+	.select-info
+		transform: translateY(4px)
 .select2-container .select2-selection--single
 	height: 48px !important
 .select2-container--default .select2-selection--single .select2-selection__rendered
 	padding-top: 10px
+	padding-left: 15px
+	& > .select-info .select-info__value
+		transform: translateY(1.5px)
 .select2-container--default .select2-selection--single .select2-selection__arrow
 	top: 50% !important
+	right: 10px !important
 	transform: translateY(-50%)
 	b
 		border-color: #000 transparent transparent transparent !important
@@ -235,5 +328,8 @@
 .select2-dropdown
 	border-radius: 5px !important
 	border: none !important
+.select2-container--default .select2-results>.select2-results__options
+	border-radius: 5px !important
 .select2-results__option
 	border-radius: 5px
+	padding-left: 15px !important

@@ -23,7 +23,8 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'./node_modules/jquery/dist/jquery.min.js',
 		'./node_modules/tether/dist/js/tether.js',
-		'./node_modules/bootstrap/dist/js/bootstrap.min.js'
+		'./node_modules/bootstrap/dist/js/bootstrap.min.js',
+		'./node_modules/select2/dist/js/select2.full.js'
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())

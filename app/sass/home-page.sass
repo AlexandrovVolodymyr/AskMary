@@ -5,6 +5,8 @@
 	-webkit-background-size: cover
 	background-size: cover
 	height: 880px
+	@media (max-width: 576px)
+		height: 650px
 	&:before
 		content: ''
 		position: absolute
@@ -17,6 +19,9 @@
 		@media (max-width: 991px)
 			width: 75px
 			height: 75px
+		@media (max-width: 576px)
+			width: 50px
+			height: 50px
 	&:after
 		content: ''
 		position: absolute
@@ -36,6 +41,8 @@
 	z-index: 1
 	@media (max-width: 991px)
 		padding-bottom: 35px
+	@media (max-width: 576px)
+		height: 650px
 
 .container
 	@media (min-width: 1200px)
@@ -125,11 +132,17 @@
 	transform: translate(-50%, -50%)
 	@media (max-width: 991px)
 		width: 690px
+	@media (max-width: 767px)
+		width: 500px
+	@media (max-width: 576px)
+		width: calc(100% - 30px)
 	&__text
 		min-width: 850px
 		@media (max-width: 991px)
 			min-width: unset
 			font-size: 55px
+		@media (max-width: 767px)
+			font-size: 39px
 	&__btn
 		background: $white
 		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.0992414)
@@ -147,6 +160,10 @@
 		&:hover, &:focus
 			text-decoration: none
 			color: $black
+		@media (max-width: 576px)
+			font-size: 20px
+			max-width: 200px
+			margin: 35px auto 0
 
 .main-icon
 	margin: auto auto 0
@@ -161,6 +178,8 @@
 	padding: 75px 0
 	@media (max-width: 991px)
 		padding: 35px 0
+	.lists
+		display: none
 .product-title
 	&__excerpt
 		color: $black
@@ -169,10 +188,12 @@
 		font-weight: 300
 		line-height: 1
 		margin-top: 15px
+		@media (max-width: 576px)
+			font-size: 20px
 .product-cards
 	margin-top: 106px
 	display: flex
-	align-items: center
+	align-items: flex-start
 	justify-content: space-between
 	@media (max-width: 991px)
 		flex-direction: column
@@ -186,9 +207,11 @@
 			width: 370px
 			&:last-child
 				margin-bottom: 0
+		@media (max-width: 576px)
+			width: 290px
 /*products*/
 
-/*dispansaries, featured*/
+/*dispensaries, featured*/
 .dispensaries, .featured
 	background: #EEEEEE
 	padding: 75px 0
@@ -207,6 +230,9 @@
 		@media (max-width: 991px)
 			width: 75px
 			height: 75px
+		@media (max-width: 576px)
+			width: 50px
+			height: 50px
 
 
 .featured
@@ -226,6 +252,9 @@
 		@media (max-width: 991px)
 			width: 75px
 			height: 75px
+		@media (max-width: 576px)
+			width: 50px
+			height: 50px
 	
 .dispensaries-title, .featured-title
 	text-align: center
@@ -236,6 +265,8 @@
 		font-weight: 300
 		line-height: 1
 		margin-top: 15px
+		@media (max-width: 576px)
+			font-size: 20px
 		
 .dispensaries-list, .featured-list
 	display: flex
@@ -255,8 +286,12 @@
 			width: 370px
 			&:last-child
 				margin-bottom: 0
+		@media (max-width: 576px)
+			width: 290px
 		.btn-main
 			margin: 34px auto 0
+			@media (max-width: 576px)
+				margin: 15px auto 0
 .dispensaries-in, .featured-in
 	background: $white
 	height: 370px
@@ -269,6 +304,8 @@
 		height: 290px
 	@media (max-width: 991px)
 		height: 370px
+	@media (max-width: 576px)
+		height: 290px
 	img
 		max-height: 100%
 		max-width: 100%
@@ -279,10 +316,11 @@
 /*medical*/
 .medical
 	background: linear-gradient(148.57deg, #2DCB71 0%, #004FDE 100%)
-	min-height: 880px
 	padding: 160px 0
 	@media (max-width: 991px)
 		padding: 70px 0 35px
+	@media (max-width: 576px)
+		padding: 35px 0
 	
 .container--medical
 	display: flex
@@ -299,6 +337,8 @@
 		flex: 0 0 100%
 		max-width: 100%
 		margin-top: 78px
+	@media (max-width: 576px)
+		margin-top: 35px
 	&__text
 		color: $white
 		font-family: 'Josefin Sans', sans-serif
@@ -306,6 +346,9 @@
 		font-size: 24px
 		line-height: 32px
 		margin: 30px 0 50px
+		@media (max-width: 576px)
+			font-size: 20px
+			margin: 30px 0
 	&__btn
 		@media (max-width: 991px)
 			margin-left: auto
@@ -331,7 +374,198 @@
 			height: 100%
 			z-index: 0
 			border-radius: 8px
+			@media (max-width: 767px)
+				left: -10px
+				top: 10px
+			@media (max-width: 767px)
+				left: -5px
+				top: 5px
 		img
 			position: relative
 			border-radius: 8px
+			@media (max-width: 767px)
+				width: 100%
 /*medical*/
+
+/*footer*/
+.footer-top
+	border-bottom: 1px solid #E9E9E9
+	padding-top: 75px
+	@media (max-width: 767px)
+		padding-top: 35px
+
+.footer-bottom
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 111px
+	color: rgba(51, 51, 51, 0.501557)
+	font-family: 'Josefin Sans', sans-serif
+	font-weight: 300
+	@media (max-width: 767px)
+		height: auto
+	@media (max-width: 576px)
+		flex-wrap: wrap
+		padding: 15px 0
+	.copyright, .copyright-author
+		line-height: 1
+		@media (max-width: 576px)
+			flex: 0 0 100%
+			max-width: 100%
+			text-align: center
+	.copyright-author
+		@media (max-width: 576px)
+			margin-top: 5px
+
+.footer-list
+	display: flex
+	justify-content: space-between
+	padding-bottom: 50px
+	@media (max-width: 767px)
+		flex-wrap: wrap
+		padding-bottom: 35px
+	&__item
+		flex: 0 0 370px
+		max-width: 370px
+		line-height: 1
+		@media (max-width: 1199px)
+			flex: 0 0 33.3333%
+			max-width: 33.3333%
+		@media (max-width: 767px)
+			flex: 0 0 100%
+			max-width: 100%
+			text-align: center
+		&:first-child
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			
+.footer-logo
+	margin-bottom: 25px
+	&__link
+		color: $black
+		font-family: 'Kanit', sans-serif
+		font-weight: 700
+		font-size: 40px
+		display: inline-block
+		line-height: 1
+		letter-spacing: 1px
+		text-transform: uppercase
+		&:hover
+			color: $black
+		
+.footer-title
+	font-family: 'Kanit', sans-serif
+	font-weight: 700
+	font-size: 24px
+	line-height: 1
+	letter-spacing: 1px
+	height: 40px
+	display: flex
+	align-items: flex-end
+	flex: 0 0 100%
+	max-width: 100%
+	margin-bottom: 25px
+	@media (max-width: 767px)
+		justify-content: center
+		height: auto
+		margin-top: 30px
+
+.footer-address
+	color: rgba(51, 51, 51, 0.501557)
+	font-family: 'Josefin Sans', sans-serif
+	font-weight: 300
+	line-height: 1.2
+	&__shell
+		max-width: 200px
+		@media (max-width: 767px)
+			margin: 0 auto
+
+.footer-social
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	margin-top: auto
+	@media (max-width: 767px)
+		justify-content: center
+		margin-top: 25px
+	&__link
+		margin-right: 10px
+		&:hover
+			opacity: 0.6
+		&:last-child
+			margin-right: 0
+			
+.footer-menu
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	&__item
+		line-height: 1
+		margin-bottom: 10px
+		max-width: 50%
+		flex-basis: 50%
+		&:nth-last-child(2)
+			margin-bottom: 0
+		&:last-child
+			margin-bottom: 0
+	&__link
+		color: $black
+		font-size: 20px
+		font-family: 'Josefin Sans', sans-serif
+		font-weight: 300
+		&:hover
+			color: $black
+			text-decoration: underline
+			
+.subscribe-form
+	width: 100%
+	@media (max-width: 576px)
+		max-width: 320px
+		margin: auto
+	&__text
+		color: rgba(51, 51, 51, 0.501557)
+		font-family: 'Josefin Sans', sans-serif
+		font-size: 20px
+		font-weight: 300
+		line-height: 1
+		margin-bottom: 10px
+	&__input
+		-webkit-border-radius: 5px
+		-moz-border-radius: 5px
+		border-radius: 5px
+		background: #FFFFFF
+		border: 1px solid #DADADA
+		color: rgba(51, 51, 51, 0.501557)
+		font-family: 'Josefin Sans', sans-serif
+		font-size: 20px
+		width: 100%
+		height: 48px
+		margin-bottom: 15px
+		padding: 15px
+	&__btn
+		width: 100%
+		max-width: 100%
+		height: 48px
+		
+	\::-webkit-input-placeholder
+		color: rgba(51, 51, 51, 0.501557)
+		font-family: 'Josefin Sans', sans-serif
+		font-size: 20px
+		font-weight: 300
+	\::-moz-placeholder
+		color: rgba(51, 51, 51, 0.501557)
+		font-family: 'Josefin Sans', sans-serif
+		font-size: 20px
+		font-weight: 300
+	\:-ms-input-placeholder
+		color: rgba(51, 51, 51, 0.501557)
+		font-family: 'Josefin Sans', sans-serif
+		font-size: 20px
+		font-weight: 300
+	\:-moz-placeholder
+		color: rgba(51, 51, 51, 0.501557)
+		font-family: 'Josefin Sans', sans-serif
+		font-size: 20px
+		font-weight: 300
+/*footer*/
