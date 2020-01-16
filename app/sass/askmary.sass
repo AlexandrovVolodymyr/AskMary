@@ -1,0 +1,33 @@
+@import 'vars'
+
+.results
+  background: linear-gradient(175.16deg, #2DCB71 0%, #205072 100%)
+  .location
+    background: #2DCC70
+
+.location
+  position: absolute
+  top: 111px
+  left: 0
+  width: 100%
+  z-index: 1
+  @media (max-width: 991px)
+    top: 83.25px
+  .container--location
+    display: flex
+    padding: 0
+.location-data
+  display: flex
+  align-items: center
+  height: 44px
+  @media (max-width: 991px)
+    height: 34px
+  &__icon
+    margin-right: 23.5px
+    @media (max-width: 576px)
+      margin-right: 10px
+  &__text
+    color: $white
+    font-family: 'Josefin Sans', sans-serif
+    font-weight: 700
+    font-size: 14px

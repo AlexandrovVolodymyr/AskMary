@@ -36,17 +36,17 @@ $(document).ready(function () {
       id: 2,
       text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
       html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
-      title: 'second'
+      title: 'third'
     }, {
       id: 3,
       text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
       html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
-      title: 'second'
+      title: 'fourth'
     }, {
       id: 4,
       text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
       html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
-      title: 'second'
+      title: 'fifth'
     }
   ];
 
@@ -56,11 +56,6 @@ $(document).ready(function () {
       text: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Each</span></div>',
       html: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Each</span></div>',
       title: 'first'
-    }, {
-      id: 1,
-      text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Each</span></div>',
-      html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Each</span></div>',
-      title: 'second'
     }
   ];
 
@@ -143,7 +138,9 @@ $(document).ready(function () {
     })
   });
 
-  $('#cardModal').on('shown.bs.modal', function (event) {
+  const cardModal = $('#cardModal');
+
+  cardModal.on('shown.bs.modal', function (event) {
     let modal = $(this);
     let button = $(event.relatedTarget);
     let text = button.data('text');
@@ -156,12 +153,9 @@ $(document).ready(function () {
     /*lists*/
     modal.find('.card-descriptions__title').addClass('show');
     modal.find('.card-descriptions__text').addClass('show').text(text);
-    // modal.slideDown('fast');
-    // const bgColor = $('.card.open').css('background');
-    // modal.find('.modal-content').css('background', bgColor);
   });
 
-  $('#cardModal').on('hidden.bs.modal', function () {
+  cardModal.on('hidden.bs.modal', function () {
     const lessBtn = $('.card-actions .see-more');
     lessBtn.text('See More Info');
     lessBtn.removeClass('open');
@@ -169,6 +163,6 @@ $(document).ready(function () {
     $(this).find('.modal-body .card-descriptions__title').removeClass('show');
     $(this).find('.modal-body .card-descriptions__text').removeClass('show').text('');
     $(this).find('.lists').removeClass('show').text('');
-    // $('.modal-content').css('background', '#fff');
+    $(this).find('.lists *').removeClass('show');
   });
 });

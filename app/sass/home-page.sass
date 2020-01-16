@@ -69,6 +69,17 @@
 .header
 	flex: 0 0 100%
 	max-width: 100%
+	position: relative
+.search
+	cursor: pointer
+	position: absolute
+	top: 50%
+	right: 105px
+	transform: translateY(-50%)
+	@media (max-width: 1199px)
+		right: 80px
+	@media (max-width: 991px)
+		right: 118px
 
 .logo, .user, .main-icon, .burger
 	cursor: pointer
@@ -180,6 +191,10 @@
 		padding: 35px 0
 	.lists
 		display: none
+.products.products--unpadding
+  padding: 0
+  .product-cards
+    margin-top: 65px
 .product-title
 	&__excerpt
 		color: $black
@@ -195,12 +210,17 @@
 	display: flex
 	align-items: flex-start
 	justify-content: space-between
+	flex-wrap: wrap
 	@media (max-width: 991px)
 		align-items: center
 		flex-direction: column
 		margin-top: 35px
 	.card
 		width: 370px
+		&:nth-child(n+4)
+			margin-top: 60px
+			@media (max-width: 991px)
+				margin-top: 0
 		@media (max-width: 1199px)
 			width: 290px
 		@media (max-width: 991px)

@@ -205,6 +205,36 @@
     background: -webkit-linear-gradient(top, #6F86D6 0%, #48C6EF 100%);
     background: -o-linear-gradient(top, #6F86D6 0%, #48C6EF 100%);
     background: linear-gradient(180deg, #6F86D6 0%, #48C6EF 100%); }
+  .card--tinture {
+    background: -webkit-gradient(linear, left top, left bottom, from(#42275A), to(#734B6D));
+    background: -webkit-linear-gradient(top, #42275A 0%, #734B6D 100%);
+    background: -o-linear-gradient(top, #42275A 0%, #734B6D 100%);
+    background: linear-gradient(180deg, #42275A 0%, #734B6D 100%); }
+  .card--preroll {
+    background: -webkit-gradient(linear, left top, left bottom, from(#80D0C7), to(#13547A));
+    background: -webkit-linear-gradient(top, #80D0C7 0%, #13547A 100%);
+    background: -o-linear-gradient(top, #80D0C7 0%, #13547A 100%);
+    background: linear-gradient(180deg, #80D0C7 0%, #13547A 100%); }
+  .card--concentrate {
+    background: -webkit-gradient(linear, left top, left bottom, from(#4568DC), to(#B06AB3));
+    background: -webkit-linear-gradient(top, #4568DC 0%, #B06AB3 100%);
+    background: -o-linear-gradient(top, #4568DC 0%, #B06AB3 100%);
+    background: linear-gradient(180deg, #4568DC 0%, #B06AB3 100%); }
+  .card--drink {
+    background: -webkit-gradient(linear, left top, left bottom, from(#000428), to(#004E92));
+    background: -webkit-linear-gradient(top, #000428 0%, #004E92 100%);
+    background: -o-linear-gradient(top, #000428 0%, #004E92 100%);
+    background: linear-gradient(180deg, #000428 0%, #004E92 100%); }
+  .card--patch {
+    background: -webkit-gradient(linear, left top, left bottom, from(#CC2B5E), to(#753A88));
+    background: -webkit-linear-gradient(top, #CC2B5E 0%, #753A88 100%);
+    background: -o-linear-gradient(top, #CC2B5E 0%, #753A88 100%);
+    background: linear-gradient(180deg, #CC2B5E 0%, #753A88 100%); }
+  .card--topical {
+    background: -webkit-gradient(linear, left top, left bottom, from(#2B5876), to(#4E4376));
+    background: -webkit-linear-gradient(top, #2B5876 0%, #4E4376 100%);
+    background: -o-linear-gradient(top, #2B5876 0%, #4E4376 100%);
+    background: linear-gradient(180deg, #2B5876 0%, #4E4376 100%); }
   .card .card-title {
     color: #ffffff;
     font-family: 'Kanit', sans-serif;
@@ -296,6 +326,11 @@
 .card-modal .modal-content {
   background: #EEEEEE; }
 
+.card-modal .modal-footer .btn-action {
+  color: #333; }
+  .card-modal .modal-footer .btn-action:hover {
+    color: #333; }
+
 .card-modal .lists {
   opacity: 0; }
   .card-modal .lists.show {
@@ -314,7 +349,37 @@
   font-weight: 700;
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
-  margin: 15px 0; }
+  margin: 30px 0; }
+
+.card-modal .effects {
+  margin-top: 30px; }
+  .card-modal .effects__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 20px; }
+    .card-modal .effects__row:last-child {
+      margin-bottom: 0; }
+  .card-modal .effects__type {
+    background: #ffffff;
+    border: 1px solid #DADADA;
+    border-radius: 5px;
+    color: #333;
+    font-size: 14px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    height: 34px;
+    margin-right: 10px;
+    padding: 8px 12px; }
+  .card-modal .effects__text {
+    color: #333;
+    font-size: 14px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1; }
 
 .card-modal .info-list {
   display: -webkit-box;
