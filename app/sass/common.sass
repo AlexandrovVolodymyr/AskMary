@@ -242,9 +242,18 @@
 		border-radius: 8px
 		z-index: -1
 .card-modal
+	.modal-dialog
+		max-width: 836px
+		@media (max-width: 991px)
+			max-width: 500px
 	.modal-content
-		background: #EEEEEE
+		//background: #EEEEEE
+		background: linear-gradient(180deg, #06BEB6 0%, #48B1BF 100%)
+		padding: 16px
+		@media (max-width: 576px)
+			padding: 0
 	.modal-footer
+		padding: 16px
 		.btn-action
 			color: $black
 			&:hover
@@ -259,13 +268,16 @@
 		&.show
 			opacity: 1
 	.lists-title
+		background: $white
+		border-top-right-radius: 5px
+		border-top-left-radius: 5px
 		font-size: 14px
 		font-weight: 700
 		font-family: 'Josefin Sans', sans-serif
 		text-align: center
-		margin: 30px 0
+		padding: 16px 16px 0
+		margin-top: 15px
 	.effects
-		margin-top: 30px
 		&__row
 			display: flex
 			align-items: center
@@ -284,13 +296,17 @@
 			margin-right: 10px
 			padding: 8px 12px
 		&__text
-			color: $black
+			color: $white
 			font-size: 14px
 			font-family: 'Josefin Sans', sans-serif
 			font-weight: 400
 			line-height: 1
 		
 	.info-list
+		background: $white
+		border-bottom-right-radius: 5px
+		border-bottom-left-radius: 5px
+		padding: 15px
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
@@ -312,13 +328,64 @@
 			opacity: 0
 			&.show
 				opacity: 1
+		&--can
+			.info-list__item
+				flex: 0 0 33%
+				max-width: 33%
+				@media (max-width: 576px)
+					flex: 0 0 100%
+					max-width: 100%
+		&.terpen-list
+			.info-list__item
+				flex: 0 0 50%
+				max-width: 50%
+				@media (max-width: 576px)
+					flex: 0 0 100%
+					max-width: 100%
+	.card-descriptions-wrapper
+		display: flex
+		justify-content: flex-start
+		flex-wrap: wrap
+	.card-left
+		flex: 0 0 366.5px
+		max-width: 366.5px
+		position: relative
+		padding-right: 16px
+		@media (max-width: 991px)
+			flex: 0 0 100%
+			max-width: 100%
+			padding-right: 0
+		&:after
+			content: ''
+			height: 100%
+			width: 1px
+			position: absolute
+			right: 0
+			top: 0
+			background-color: $white
+			@media (max-width: 991px)
+				display: none
+	.card-right
+		flex: 0 0 calc(100% - 366.5px)
+		max-width: calc(100% - 366.5px)
+		padding-left: 16px
+		@media (max-width: 991px)
+			flex: 0 0 100%
+			max-width: 100%
+			padding-left: 0
+			margin-top: 15px
 	.card-descriptions
+		background: $white
+		-webkit-border-radius: 5px
+		-moz-border-radius: 5px
+		border-radius: 5px
 		&__title
 			font-weight: 700
 			text-align: center
+			padding-top: 15px
 		&__text
 			font-weight: 400
-			margin-top: 15px
+			padding: 15px
 		&__text, &__title
 			font-size: 14px
 			font-family: 'Josefin Sans', sans-serif

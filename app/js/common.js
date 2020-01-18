@@ -79,12 +79,12 @@ $(document).ready(function () {
     escapeMarkup: function(markup) {
       return markup;
     },
-    templateResult: function(data) {
-      return data.html;
-    },
-    templateSelection: function(data) {
-      return data.text;
-    }
+    // templateResult: function(data) {
+    //   return data.html;
+    // },
+    // templateSelection: function(data) {
+    //   return data.text;
+    // }
   });
 
   $(".card-select--edible").select2({
@@ -145,11 +145,10 @@ $(document).ready(function () {
     let button = $(event.relatedTarget);
     let text = button.data('text');
     /*lists*/
-    modal.find('.terpen__title').addClass('show');
     let lists = button.closest('.card.open').find('.lists').clone();
     lists.addClass('show');
-    lists.find('*').addClass('show');
     modal.find('.modal-lists').html(lists);
+    lists.find('*').addClass('show');
     /*lists*/
     modal.find('.card-descriptions__title').addClass('show');
     modal.find('.card-descriptions__text').addClass('show').text(text);
