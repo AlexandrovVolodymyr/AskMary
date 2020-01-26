@@ -223,50 +223,39 @@
 				width: 100%
 	.card-select
 		width: 100%
-
-	.card-actions
-		display: flex
-		justify-content: space-between
-.card.open
-	z-index: 1
-	&:after
-		content: ''
-		width: 100%
-		height: 100%
-		position: absolute
-		top: 0
-		left: 0
-		border: 2px solid $yellow
-		-webkit-border-radius: 8px
-		-moz-border-radius: 8px
-		border-radius: 8px
-		z-index: -1
-.card-modal
-	.modal-dialog
-		max-width: 836px
-		@media (max-width: 991px)
-			max-width: 500px
-	.modal-content
-		//background: #EEEEEE
-		background: linear-gradient(180deg, #06BEB6 0%, #48B1BF 100%)
-		padding: 16px
-		@media (max-width: 576px)
-			padding: 0
-	.modal-footer
-		padding: 16px
-		.btn-action
-			color: $black
-			&:hover
-				color: $black
 	.lists
+		background: linear-gradient(180deg, #06BEB6 0%, #48B1BF 100%)
+		-webkit-border-radius: 5px
+		-moz-border-radius: 5px
+		border-radius: 5px
 		opacity: 0
-		&.show
+		transition: all 0.3s ease-in-out
+		position: absolute
+		left: 0
+		top: 0
+		//padding: 32px
+		padding: 32px 16px
+		width: 100%
+		pointer-events: none
+		z-index: 1
+		@media (max-width: 1199px)
+			width: 107%
+		@media (max-width: 991px)
+			width: 100%
+			position: static
+			height: 0
+			padding: 0
+		&--show
+			border-left: 1px solid $white
+			left: 100%
 			opacity: 1
-	.lists *
-		opacity: 0
-		transition: opacity 1.75s
-		&.show
-			opacity: 1
+			pointer-events: auto
+			border-top-left-radius: 0
+			border-bottom-left-radius: 0
+			height: auto
+			@media (max-width: 991px)
+				border: none
+				padding-top: 40px
 	.lists-title
 		background: $white
 		border-top-right-radius: 5px
@@ -277,6 +266,8 @@
 		text-align: center
 		padding: 16px 16px 0
 		margin-top: 15px
+		@media (max-width: 991px)
+			margin-top: 40px
 	.effects
 		&__row
 			display: flex
@@ -301,7 +292,7 @@
 			font-family: 'Josefin Sans', sans-serif
 			font-weight: 400
 			line-height: 1
-		
+
 	.info-list
 		background: $white
 		border-bottom-right-radius: 5px
@@ -312,6 +303,10 @@
 		justify-content: space-between
 		font-size: 14px
 		font-family: 'Josefin Sans', sans-serif
+		@media (max-width: 1199px)
+			font-size: 11px
+		@media (max-width: 991px)
+			font-size: 13px
 		&__item
 			display: flex
 			justify-content: space-between
@@ -322,12 +317,10 @@
 				display: flex
 				justify-content: space-between
 				align-items: center
+				@media (max-width: 576px)
+					margin: auto
 		.inform-value
 			margin-left: 5px
-		.inform-name, .inform-value
-			opacity: 0
-			&.show
-				opacity: 1
 		&--can
 			.info-list__item
 				flex: 0 0 33%
@@ -343,37 +336,35 @@
 					flex: 0 0 100%
 					max-width: 100%
 	.card-descriptions-wrapper
-		display: flex
-		justify-content: flex-start
-		flex-wrap: wrap
-	.card-left
-		flex: 0 0 366.5px
-		max-width: 366.5px
-		position: relative
-		padding-right: 16px
+		background: linear-gradient(0deg, #06BEB6 0%, #48B1BF 100%)
+		-webkit-border-radius: 5px
+		-moz-border-radius: 5px
+		border-radius: 5px
+		opacity: 0
+		transition: all 0.3s ease-in-out
+		position: absolute
+		left: 0
+		top: 0
+		padding: 32px
+		pointer-events: none
+		z-index: 1
+		width: 100%
+		@media (max-width: 1199px)
+			padding: 16px
 		@media (max-width: 991px)
-			flex: 0 0 100%
-			max-width: 100%
-			padding-right: 0
-		&:after
-			content: ''
-			height: 100%
-			width: 1px
-			position: absolute
-			right: 0
-			top: 0
-			background-color: $white
+			position: static
+			height: 0
+			padding: 0
+		&--show
+			top: 100%
+			opacity: 1
+			pointer-events: auto
+			border-top-left-radius: 0
+			border-top-right-radius: 0
+			height: auto
 			@media (max-width: 991px)
-				display: none
-	.card-right
-		flex: 0 0 calc(100% - 366.5px)
-		max-width: calc(100% - 366.5px)
-		padding-left: 16px
-		@media (max-width: 991px)
-			flex: 0 0 100%
-			max-width: 100%
-			padding-left: 0
-			margin-top: 15px
+				.card-descriptions
+					margin-top: 40px
 	.card-descriptions
 		background: $white
 		-webkit-border-radius: 5px
@@ -386,15 +377,52 @@
 		&__text
 			font-weight: 400
 			padding: 15px
+			max-height: 80px
+			overflow: hidden
 		&__text, &__title
 			font-size: 14px
 			font-family: 'Josefin Sans', sans-serif
-			opacity: 0
-			transition: opacity 1.75s
+		&__more
+			display: none
+			font-size: 14px
+			font-family: 'Josefin Sans', sans-serif
+			text-align: right
+			padding-right: 16px
+			padding-bottom: 5px
 			&.show
-				opacity: 1
+				display: block
 
+	.card-actions
+		display: flex
+		justify-content: space-between
 
+.card.open
+	z-index: 2
+	border-top-right-radius: 0
+	border-bottom-right-radius: 0
+	border-bottom-left-radius: 0
+	background: linear-gradient(180deg, #06BEB6 0%, #48B1BF 100%)
+	@media (max-width: 991px)
+		-webkit-border-radius: 5px
+		-moz-border-radius: 5px
+		border-radius: 5px
+.card.last-in-row.open
+	border-radius: 0 5px 0 0
+	@media (max-width: 991px)
+		-webkit-border-radius: 5px
+		-moz-border-radius: 5px
+		border-radius: 5px
+.card.last-in-row
+	.lists--show
+		left: -100%
+		border-radius: 5px 0 0 5px
+		border-left: none
+		border-right: 1px solid $white
+		@media (max-width: 1199px)
+			left: -107%
+		@media (max-width: 991px)
+			position: static
+			border: none
 /*custom select*/
 .select-info
 	display: flex

@@ -4,17 +4,17 @@
     <list default="true" id="8ebda545-0c14-4254-ab34-0f839e5b2083" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/askmary.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/askmary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/askmary.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/askmary.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/home-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/home-page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/profile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/home-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/home-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sass/askmary.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/askmary.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/sass/common.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/common.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sass/profile.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/profile.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/home-page.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/home-page.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/askmary.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/askmary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/home-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/home-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/profile.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,7 +68,9 @@
       <workItem from="1579024916086" duration="8698000" />
       <workItem from="1579076338716" duration="28306000" />
       <workItem from="1579166593534" duration="17514000" />
-      <workItem from="1579348055697" duration="4265000" />
+      <workItem from="1579348055697" duration="4437000" />
+      <workItem from="1579862650318" duration="59000" />
+      <workItem from="1580028271820" duration="8031000" />
     </task>
     <servers />
   </component>

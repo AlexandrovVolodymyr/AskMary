@@ -265,8 +265,6 @@
   @media (max-width: 991px) {
     .products {
       padding: 35px 0; } }
-  .products .lists {
-    display: none; }
 
 .products.products--unpadding {
   padding: 0; }
