@@ -141,9 +141,12 @@ $(document).ready(function () {
         $('.card').removeClass('open');
         $('.card-descriptions-wrapper').removeClass('card-descriptions-wrapper--show');
         $('.lists').removeClass('lists--show');
+        $('.card-descriptions__more').removeClass('show');
 
         $('.card-descriptions__text').css('max-height', '80px');
-        $('.card-descriptions__more').addClass('show');
+        if ($(this).closest('.card').find('.card-descriptions__text-shell').height() > CONST_HEIGHT) {
+          $('.card-descriptions__more').addClass('show');
+        }
 
         // delete for current
         $(this).addClass('open');
@@ -154,10 +157,6 @@ $(document).ready(function () {
       }
     })
   });
-
-  if (heightText > CONST_HEIGHT) {
-    more.addClass('show');
-  }
 
   more.on('click', function () {
     $(this).prev('.card-descriptions__text').css('max-height', '100%');

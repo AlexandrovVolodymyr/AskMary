@@ -324,6 +324,7 @@
         width: 107%; } }
     @media (max-width: 991px) {
       .card .lists {
+        background: transparent;
         width: 100%;
         position: static;
         height: 0;
