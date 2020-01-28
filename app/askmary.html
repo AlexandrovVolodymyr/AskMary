@@ -1085,5 +1085,78 @@
 <script src="js/libs.min.js"></script>
 <!--<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>-->
 <script src="js/common.js"></script>
+<script>
+    $(document).ready(function () {
+        const dataSelect = [
+            [
+                {
+                    id: 0,
+                    text: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Gram</span></div>',
+                    html: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Gram</span></div>',
+                    title: 'first'
+                }, {
+                id: 1,
+                text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+                html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+                title: 'second'
+            }, {
+                id: 2,
+                text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+                html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+                title: 'third'
+            }, {
+                id: 3,
+                text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+                html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+                title: 'fourth'
+            }, {
+                id: 4,
+                text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+                html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+                title: 'fifth'
+            }
+            ],
+            [
+                {
+                    id: 0,
+                    text: '<div class="select-info"><span class="select-info__cost">$11</span><span class="select-info__value">1 Each</span></div>',
+                    html: '<div class="select-info"><span class="select-info__cost">$11</span><span class="select-info__value">1 Each</span></div>',
+                    title: 'first'
+                }
+            ],
+            [
+                {
+                    id: 0,
+                    text: '<div class="select-info"><span class="select-info__cost">$15</span><span class="select-info__value">1 Each</span></div>',
+                    html: '<div class="select-info"><span class="select-info__cost">$15</span><span class="select-info__value">1 Each</span></div>',
+                    title: 'first'
+                },
+                {
+                    id: 0,
+                    text: '<div class="select-info"><span class="select-info__cost">$30</span><span class="select-info__value">2 Each</span></div>',
+                    html: '<div class="select-info"><span class="select-info__cost">$30</span><span class="select-info__value">2 Each</span></div>',
+                    title: 'second'
+                }
+            ]
+        ];
+        const data = dataSelect.map(item => item);
+
+        $('.card-select').each(function (index) {
+            $(this).select2({
+                minimumResultsForSearch: -1,
+                data: data[index],
+                escapeMarkup: function (markup) {
+                    return markup;
+                },
+                templateResult: function (data) {
+                    return data.html;
+                },
+                templateSelection: function (data) {
+                    return data.text;
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>

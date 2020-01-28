@@ -21,100 +21,6 @@ $(document).ready(function () {
     $('html, body').animate({scrollTop: dn}, 500);
   });
 
-  const selectFlower = [
-    {
-      id: 0,
-      text: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Gram</span></div>',
-      html: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Gram</span></div>',
-      title: 'first'
-    }, {
-      id: 1,
-      text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
-      html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
-      title: 'second'
-    }, {
-      id: 2,
-      text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
-      html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
-      title: 'third'
-    }, {
-      id: 3,
-      text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
-      html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
-      title: 'fourth'
-    }, {
-      id: 4,
-      text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
-      html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
-      title: 'fifth'
-    }
-  ];
-
-  const selectEdible = [
-    {
-      id: 0,
-      text: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Each</span></div>',
-      html: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Each</span></div>',
-      title: 'first'
-    }
-  ];
-
-  const selectVape = [
-    {
-      id: 0,
-      text: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Gram</span></div>',
-      html: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Gram</span></div>',
-      title: 'first'
-    }, {
-      id: 1,
-      text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
-      html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
-      title: 'second'
-    }
-  ];
-
-  $(".card-select--flower").select2({
-    minimumResultsForSearch: -1,
-    data: selectFlower,
-    escapeMarkup: function(markup) {
-      return markup;
-    },
-    templateResult: function(data) {
-      return data.html;
-    },
-    templateSelection: function(data) {
-      return data.text;
-    }
-  });
-
-  $(".card-select--edible").select2({
-    minimumResultsForSearch: -1,
-    data: selectEdible,
-    escapeMarkup: function(markup) {
-      return markup;
-    },
-    templateResult: function(data) {
-      return data.html;
-    },
-    templateSelection: function(data) {
-      return data.text;
-    }
-  });
-
-  $(".card-select--vape").select2({
-    minimumResultsForSearch: -1,
-    data: selectVape,
-    escapeMarkup: function(markup) {
-      return markup;
-    },
-    templateResult: function(data) {
-      return data.html;
-    },
-    templateSelection: function(data) {
-      return data.text;
-    }
-  });
-
   const heightText = $('.card-descriptions__text-shell').height();
   const CONST_HEIGHT = 80;
   const more = $('.card-descriptions__more');
@@ -162,5 +68,99 @@ $(document).ready(function () {
     $(this).prev('.card-descriptions__text').css('max-height', '100%');
     $('.card-descriptions__more').removeClass('show');
   });
+
+  // const selectFlower = [
+  //   {
+  //     id: 0,
+  //     text: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Gram</span></div>',
+  //     html: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Gram</span></div>',
+  //     title: 'first'
+  //   }, {
+  //     id: 1,
+  //     text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+  //     html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+  //     title: 'second'
+  //   }, {
+  //     id: 2,
+  //     text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+  //     html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+  //     title: 'third'
+  //   }, {
+  //     id: 3,
+  //     text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+  //     html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+  //     title: 'fourth'
+  //   }, {
+  //     id: 4,
+  //     text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+  //     html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+  //     title: 'fifth'
+  //   }
+  // ];
+  //
+  // const selectEdible = [
+  //   {
+  //     id: 0,
+  //     text: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Each</span></div>',
+  //     html: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Each</span></div>',
+  //     title: 'first'
+  //   }
+  // ];
+  //
+  // const selectVape = [
+  //   {
+  //     id: 0,
+  //     text: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Gram</span></div>',
+  //     html: '<div class="select-info"><span class="select-info__cost">$20</span><span class="select-info__value">1 Gram</span></div>',
+  //     title: 'first'
+  //   }, {
+  //     id: 1,
+  //     text: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+  //     html: '<div class="select-info"><span class="select-info__cost">$40</span><span class="select-info__value">2 Gram</span></div>',
+  //     title: 'second'
+  //   }
+  // ];
+
+  // $(".card-select--flower").select2({
+  //   minimumResultsForSearch: -1,
+  //   data: selectFlower,
+  //   escapeMarkup: function(markup) {
+  //     return markup;
+  //   },
+  //   templateResult: function(data) {
+  //     return data.html;
+  //   },
+  //   templateSelection: function(data) {
+  //     return data.text;
+  //   }
+  // });
+  //
+  // $(".card-select--edible").select2({
+  //   minimumResultsForSearch: -1,
+  //   data: selectEdible,
+  //   escapeMarkup: function(markup) {
+  //     return markup;
+  //   },
+  //   templateResult: function(data) {
+  //     return data.html;
+  //   },
+  //   templateSelection: function(data) {
+  //     return data.text;
+  //   }
+  // });
+  //
+  // $(".card-select--vape").select2({
+  //   minimumResultsForSearch: -1,
+  //   data: selectVape,
+  //   escapeMarkup: function(markup) {
+  //     return markup;
+  //   },
+  //   templateResult: function(data) {
+  //     return data.html;
+  //   },
+  //   templateSelection: function(data) {
+  //     return data.text;
+  //   }
+  // });
 
 });

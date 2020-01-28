@@ -311,6 +311,8 @@
           width: 100%; } }
   .card .card-select {
     width: 100%; }
+    .card .card-select option {
+      display: none; }
   .card .lists {
     background: -webkit-gradient(linear, left top, left bottom, from(#06BEB6), to(#48B1BF));
     background: -webkit-linear-gradient(top, #06BEB6 0%, #48B1BF 100%);
